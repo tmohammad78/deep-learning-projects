@@ -38,11 +38,11 @@ we have another type as name **overcomplete** that has larger dimension from inp
 </p>
 
 ## <span id="loss"> Loss Function </span>
-In general we use this for our dataset for average the loss of samples <img src="https://render.githubusercontent.com/render/math?math=\frac{1}{m} \sum_{j=1}^m \ell(x^{(j)},\hat{x}^{(j)})" />
+In general we use this for our dataset for average the loss of samples <div style="background-color:white;text-align:center;width:40%;margin:auto;border-radius:5px;line-height:0px"><img style="margin:10px 0px" src="https://render.githubusercontent.com/render/math?math=\frac{1}{m} \sum_{j=1}^m \ell(x^{(j)},\hat{x}^{(j)})" /></div>
 
-For calculate reconstruction loss we use
-<img src="https://render.githubusercontent.com/render/math?math=\ell(\boldsymbol{x},\boldsymbol{\hat{x}}) = \frac{1}{2} \lVert \boldsymbol{x} - \boldsymbol{\hat{x}} \rVert^2" />
-
+For calculate reconstruction loss we use <div style="background-color:white;text-align:center;width:40%;margin:auto;border-radius:5px;line-height:0px">
+<img style="margin:10px 0px" src="https://render.githubusercontent.com/render/math?math=\ell(\boldsymbol{x},\boldsymbol{\hat{x}}) = \frac{1}{2} \lVert \boldsymbol{x} - \boldsymbol{\hat{x}} \rVert^2" />
+</div>
 we check differnce between main input and genrated output . <br />
 
 I wanted to recap shortly auto encoder concept , Certainly There are more than I wrote , so please keep going to study more .
