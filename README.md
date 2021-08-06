@@ -1,4 +1,4 @@
-# deep-learning-projects
+# Deep learning projects
 
 ### Purpos
 It will have been a good repository for recap deep learning concepts from many resourses beside code sample . <br />
