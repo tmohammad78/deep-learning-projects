@@ -6,6 +6,7 @@
   - [Loss function](#loss-function)
   - [But what things we want from regularization ?](#but-what-things-we-want-from-regularization-)
   - [How backpropagate](#how-backpropagate)
+  - [Implement](#implement)
 
 ## The Problem of AutoEncoder
 
@@ -56,6 +57,13 @@ We add **μ** and  **σ** as fixed vector and we scaled by random constant , We 
 <small>* ⊙ is the element-wise multiplication.</small><br />
 
 
-<small>Resources :</small> [<small> VAE and AE Meduim</small>](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) , [<small>Tutorial</small>](https://sci2lab.github.io/ml_tutorial/autoencoder/#), [<small>From AuoEncoder to Beta-VAE</small>](https://lilianweng.github.io/lil-log/2018/08/12/from-autoencoder-to-beta-vae.html) , [<small>MIT course</small>](https://www.youtube.com/watch?v=BUNl0To1IVw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4)
+## Implement
+For implementing we split our code to encoder and decoder 
+and also latent space , We got that latent space is 
+`Z = mean + sigma * epsilo` . <br />
+For calculate sigma we write in this shape `sigma = tf.exp(0.5 * z_log_v)` , You see that we use log of variance not standard deviation directly , for more detail you can check this link [log variance](https://stats.stackexchange.com/questions/486203/why-we-learn-log-sigma2-in-vae-reparameterization-trick-instead-of-standar?newreg=b3630e5f1932420788dc2d1b6ff3ad43) and [reparameterization](https://towardsdatascience.com/reparameterization-trick-126062cfd3c3) .
 
-You can check [mnist VAE](https://github.com/tmohammad78/deep-learning-projects/blob/main/variational-autoencoder/mode.ipynb)
+ After all we know create decoder and encoder , we use `tf.keras.layers.Conv2` that used for convolution 
+<br /><small>Resources :</small> [<small> VAE and AE Meduim</small>](https://towardsdatascience.com/understanding-variational-autoencoders-vaes-f70510919f73) , [<small>Tutorial</small>](https://sci2lab.github.io/ml_tutorial/autoencoder/#), [<small>From AuoEncoder to Beta-VAE</small>](https://lilianweng.github.io/lil-log/2018/08/12/from-autoencoder-to-beta-vae.html) , [<small>MIT course</small>](https://www.youtube.com/watch?v=BUNl0To1IVw&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=4)
+
+You can check [mnist VAE](https://github.com/tmohammad78/deep-learning-projects/blob/main/variational-autoencoder/mode.ipynb) and better version is [Mnits](https://github.com/tmohammad78/deep-learning-projects/blob/main/variational-autoencoder/mnist-vae.ipynb)
